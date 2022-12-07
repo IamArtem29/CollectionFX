@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<VBox fx:id="gridPane"
+      alignment="CENTER"
+      spacing="5.0"
+      xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+    <Label fx:id="name"/>
+    <Label fx:id="type"/>
+    <Label fx:id="id"/>
+    <Label fx:id="categories"/>
+    <Button fx:id="updateButton" text="Change"/>
+    <Button fx:id="deleteButton" text="Delete"/>
+    <Button fx:id="detailedLookButton" text="Show"/>
+</VBox>

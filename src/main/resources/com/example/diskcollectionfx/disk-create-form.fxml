@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.Label?>
+<VBox minWidth="200" alignment="CENTER" spacing="5.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.diskcollectionfx.DiskCreateFormController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label text="Name"/>
+    <TextField fx:id="diskName" />
+    <Label text="Description"/>
+    <TextField fx:id="diskDescription" />
+    <Label text="Type"/>
+    <ToggleButton onAction="#onDVDChoice" text="DVD" fx:id="diskTypeDVD" />
+    <ToggleButton onAction="#onCDRChoice"  text="CD-R" fx:id="diskTypeCDR" />
+    <ToggleButton onAction="#onMINI_DISKChoice"  text="mini-disk" fx:id="diskTypeMINI_DISK" />
+    <Button text="Add" onAction="#onFormSubmit"/>
+    <Button fx:id="backButton" text="Back" onAction="#onBackClick"/>
+</VBox>
