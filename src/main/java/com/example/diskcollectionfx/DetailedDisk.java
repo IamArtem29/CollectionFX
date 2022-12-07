@@ -1,6 +1,6 @@
 package com.example.diskcollectionfx;
-import com.example.diskcollectionfx.logic.domain.Disk;
-import com.example.diskcollectionfx.logic.domain.DiskType;
+import com.example.diskcollectionfx.consoleapp.domain.Disk;
+import com.example.diskcollectionfx.consoleapp.domain.DiskType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Objects;
-public class DetailedLookScreenController {
+public class DetailedDisk {
     @FXML
     private Label diskName;
     @FXML
@@ -23,9 +23,9 @@ public class DetailedLookScreenController {
     @FXML
     private Button backButton;
     private Disk disk;
-    public DetailedLookScreenController(Disk newDisk, Stage stage) {
+    public DetailedDisk(Disk newDisk, Stage stage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("detailed-look-screen.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("detailed-disk.fxml"));
             disk = newDisk;
             loader.setController(this);
             stage.setScene(new Scene(loader.load(), 700, 700));
@@ -59,7 +59,7 @@ public class DetailedLookScreenController {
             throw new RuntimeException(e);
         }
         String category = String.join(",", categoryString);
-        diskCategories.setText("Categories - " + category);
+        diskCategories.setText("Categories - \n" + category.replace(",","\n"));
     }
     @FXML
     protected void onBackClick() {
@@ -67,7 +67,7 @@ public class DetailedLookScreenController {
         Parent myNewScene = null;
         try {
             stage = (Stage) backButton.getScene().getWindow();
-            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items.fxml")));
+            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-disks.fxml")));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

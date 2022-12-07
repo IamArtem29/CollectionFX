@@ -1,11 +1,9 @@
 package com.example.diskcollectionfx;
-import com.example.diskcollectionfx.logic.service.DiskService;
-import com.example.diskcollectionfx.logic.domain.Disk;
-import com.example.diskcollectionfx.logic.domain.DiskType;
-import com.example.diskcollectionfx.logic.repository.DBConnector;
-import com.example.diskcollectionfx.logic.repository.DiskRepository;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.example.diskcollectionfx.consoleapp.service.DiskService;
+import com.example.diskcollectionfx.consoleapp.domain.Disk;
+import com.example.diskcollectionfx.consoleapp.domain.DiskType;
+import com.example.diskcollectionfx.consoleapp.repository.DBConnector;
+import com.example.diskcollectionfx.consoleapp.repository.DiskRepository;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,18 +11,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Array;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Objects;
-public class DiskUpdateFormController {
+public class DiskUpdate {
     private Disk disk;
-    public DiskUpdateFormController(Disk newDisk, Stage stage) {
+    public DiskUpdate(Disk newDisk, Stage stage) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("disk-update-form.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("disk-update.fxml"));
             disk = newDisk;
             loader.setController(this);
             stage.setScene(new Scene(loader.load(), 700, 700));
@@ -94,6 +91,7 @@ public class DiskUpdateFormController {
         updateButton.setOnAction(actionEvent -> {
             try {
                 onFormSubmit();
+                onBackClick();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
@@ -108,7 +106,7 @@ public class DiskUpdateFormController {
         Parent NewScene = null;
         try {
             stage = (Stage) backButton.getScene().getWindow();
-            NewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items.fxml")));
+            NewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-disks.fxml")));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -146,13 +144,12 @@ public class DiskUpdateFormController {
         Parent NewScene = null;
         try{
             stage = (Stage) backButton.getScene().getWindow();
-            NewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items.fxml")));
+            NewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-disks.fxml")));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
         if (NewScene != null){
             Scene scene = new Scene(NewScene, 700, 700);
-//            stage.getScene(scene);
             stage.getScene();
             stage.setTitle("Update");
             stage.show();

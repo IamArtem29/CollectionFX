@@ -6,7 +6,7 @@
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.Label?>
 <VBox minWidth="200" alignment="CENTER" spacing="5.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.diskcollectionfx.DiskCreateFormController">
+      fx:controller="com.example.diskcollectionfx.DiskCreate">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>

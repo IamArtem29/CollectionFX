@@ -1,9 +1,9 @@
-package com.example.diskcollectionfx.logic.navigation;
+package com.example.diskcollectionfx.consoleapp.navigation;
 
-import com.example.diskcollectionfx.logic.domain.Disk;
-import com.example.diskcollectionfx.logic.domain.DiskType;
-import com.example.diskcollectionfx.logic.repository.DBConnector;
-import com.example.diskcollectionfx.logic.service.DiskService;
+import com.example.diskcollectionfx.consoleapp.domain.Disk;
+import com.example.diskcollectionfx.consoleapp.domain.DiskType;
+import com.example.diskcollectionfx.consoleapp.repository.DBConnector;
+import com.example.diskcollectionfx.consoleapp.service.DiskService;
 import java.sql.Array;
 import java.sql.Connection;
 import java.sql.SQLException;

@@ -1,6 +1,6 @@
-package com.example.diskcollectionfx.logic.service;
-import com.example.diskcollectionfx.logic.domain.Disk;
-import com.example.diskcollectionfx.logic.repository.DiskRepository;
+package com.example.diskcollectionfx.consoleapp.service;
+import com.example.diskcollectionfx.consoleapp.domain.Disk;
+import com.example.diskcollectionfx.consoleapp.repository.DiskRepository;
 import java.sql.SQLException;
 import java.util.ArrayList;
 public class DiskService implements Service<Disk>{

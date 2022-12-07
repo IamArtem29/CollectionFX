@@ -1,9 +1,9 @@
 package com.example.diskcollectionfx;
-import com.example.diskcollectionfx.logic.service.DiskService;
-import com.example.diskcollectionfx.logic.domain.Disk;
-import com.example.diskcollectionfx.logic.domain.DiskType;
-import com.example.diskcollectionfx.logic.repository.DBConnector;
-import com.example.diskcollectionfx.logic.repository.DiskRepository;
+import com.example.diskcollectionfx.consoleapp.service.DiskService;
+import com.example.diskcollectionfx.consoleapp.domain.Disk;
+import com.example.diskcollectionfx.consoleapp.domain.DiskType;
+import com.example.diskcollectionfx.consoleapp.repository.DBConnector;
+import com.example.diskcollectionfx.consoleapp.repository.DiskRepository;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,9 +16,8 @@ import java.io.IOException;
 import java.sql.Array;
 import java.sql.SQLException;
 import java.sql.Connection;
-import java.util.ArrayList;
 import java.util.Objects;
-public class DiskCreateFormController {
+public class DiskCreate {
     @FXML
     private TextField diskName;
     @FXML

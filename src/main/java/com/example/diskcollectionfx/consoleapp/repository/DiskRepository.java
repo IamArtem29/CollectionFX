@@ -1,6 +1,6 @@
-package com.example.diskcollectionfx.logic.repository;
-import com.example.diskcollectionfx.logic.domain.Disk;
-import com.example.diskcollectionfx.logic.domain.DiskType;
+package com.example.diskcollectionfx.consoleapp.repository;
+import com.example.diskcollectionfx.consoleapp.domain.Disk;
+import com.example.diskcollectionfx.consoleapp.domain.DiskType;
 import java.sql.*;
 import java.util.ArrayList;
 import java.sql.Array;

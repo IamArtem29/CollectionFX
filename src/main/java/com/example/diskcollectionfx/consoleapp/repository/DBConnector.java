@@ -1,4 +1,4 @@
-package com.example.diskcollectionfx.logic.repository;
+package com.example.diskcollectionfx.consoleapp.repository;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

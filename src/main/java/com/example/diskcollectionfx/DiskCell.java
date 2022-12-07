@@ -1,9 +1,9 @@
 package com.example.diskcollectionfx;
-import com.example.diskcollectionfx.logic.service.DiskService;
-import com.example.diskcollectionfx.logic.domain.Disk;
-import com.example.diskcollectionfx.logic.domain.DiskType;
-import com.example.diskcollectionfx.logic.repository.DBConnector;
-import com.example.diskcollectionfx.logic.repository.DiskRepository;
+import com.example.diskcollectionfx.consoleapp.service.DiskService;
+import com.example.diskcollectionfx.consoleapp.domain.Disk;
+import com.example.diskcollectionfx.consoleapp.domain.DiskType;
+import com.example.diskcollectionfx.consoleapp.repository.DBConnector;
+import com.example.diskcollectionfx.consoleapp.repository.DiskRepository;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,11 +15,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-public class DiskCellController extends ListCell<Disk> {
+public class DiskCell extends ListCell<Disk> {
     @FXML
     private VBox gridPane;
     @FXML
@@ -30,6 +26,8 @@ public class DiskCellController extends ListCell<Disk> {
     private Label id;
     @FXML
     private Label categories;
+    @FXML
+    private Label description;
     @FXML
     private Button deleteButton;
     @FXML
@@ -70,7 +68,7 @@ public class DiskCellController extends ListCell<Disk> {
                 diskService.deleteById(disk.getId());
             });
             updateButton.setOnAction(actionEvent -> {
-                new DiskUpdateFormController(disk, (Stage) updateButton.getScene().getWindow());
+                new DiskUpdate(disk, (Stage) updateButton.getScene().getWindow());
             });
 
             String[] categoryString = new String[0];
@@ -83,9 +81,9 @@ public class DiskCellController extends ListCell<Disk> {
             categories.setText("Categories - " + categoriesString);
 
             detailedLookButton.setOnAction(actionEvent -> {
-                new DetailedLookScreenController(disk, (Stage) detailedLookButton.getScene().getWindow());
+                new DetailedDisk(disk, (Stage) detailedLookButton.getScene().getWindow());
             });
-            type.setText(diskType);
+            type.setText("Type - " + diskType);
             id.setText("Number of disk - " + disk.getId());
             name.setText("Name - " + disk.getName());
             setGraphic(gridPane);

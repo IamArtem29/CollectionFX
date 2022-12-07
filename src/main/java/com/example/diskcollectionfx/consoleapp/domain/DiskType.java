@@ -1,4 +1,4 @@
-package com.example.diskcollectionfx.logic.domain;
+package com.example.diskcollectionfx.consoleapp.domain;
 public enum DiskType {
     DVD("DVD"),
     CDR("CD-R"),

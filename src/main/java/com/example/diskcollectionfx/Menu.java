@@ -20,7 +20,7 @@ public class Menu {
         Parent myNewScene = null;
         try {
             stage = (Stage) allItemsButton.getScene().getWindow();
-            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items.fxml")));
+            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-disks.fxml")));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -37,7 +37,7 @@ public class Menu {
         Parent myNewScene = null;
         try {
             stage = (Stage) addNewItemButton.getScene().getWindow();
-            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("disk-create-form.fxml")));
+            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("disk-create.fxml")));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

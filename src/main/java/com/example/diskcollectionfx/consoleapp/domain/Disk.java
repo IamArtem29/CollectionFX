@@ -1,4 +1,4 @@
-package com.example.diskcollectionfx.logic.domain;
+package com.example.diskcollectionfx.consoleapp.domain;
 import java.sql.Array;
 public class Disk {
     private String name;
@@ -41,7 +41,7 @@ public class Disk {
         this.categories = categories;
     }
     public String toString(){
-        return "Disk number - " + this.id + "\n" + "Name - " + this.name + "\n" + "Type - " + this.type.getValue() + "\n" + "Categories - " + this.categories + "\n";
+        return "Disk number - " + this.id + "\n" + "Name - " + this.name + "\n" + "Type - " + this.type.getValue() + "\n" + "Categories - " + this.categories + "\n"+ this.description + "\n";
     }
     public String getInfo() {
         String type = null;
@@ -54,6 +54,6 @@ public class Disk {
         if(this.type == DiskType.MINI_DISK){
             type = "mini-disk";
         }
-        return "Disk number - " + this.id + "\n" + "Name - " + this.name + "\n" + "Type - " + type + "\n" + "Categories - " + this.categories + "\n";
+        return "Disk number - " + this.id + "\n" + "Name - " + this.name + "\n" + "Type - " + type + "\n" + "Categories - " + this.categories + "\n" + this.description + "\n";
     }
 }

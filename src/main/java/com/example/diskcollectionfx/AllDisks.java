@@ -1,8 +1,8 @@
 package com.example.diskcollectionfx;
-import com.example.diskcollectionfx.logic.service.DiskService;
-import com.example.diskcollectionfx.logic.domain.Disk;
-import com.example.diskcollectionfx.logic.repository.DBConnector;
-import com.example.diskcollectionfx.logic.repository.DiskRepository;
+import com.example.diskcollectionfx.consoleapp.service.DiskService;
+import com.example.diskcollectionfx.consoleapp.domain.Disk;
+import com.example.diskcollectionfx.consoleapp.repository.DBConnector;
+import com.example.diskcollectionfx.consoleapp.repository.DiskRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,11 +12,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
-public class AllItems {
+public class AllDisks {
     @FXML
     private ListView<Disk> diskList;
     @FXML
@@ -27,7 +26,7 @@ public class AllItems {
         DiskService diskService = new DiskService(diskRepository);
         ArrayList<Disk> allDisks = diskService.getAll();
         ObservableList<Disk> observableDisks = FXCollections.observableArrayList(allDisks);
-        diskList.setCellFactory(diskListView -> new DiskCellController());
+        diskList.setCellFactory(diskListView -> new DiskCell());
         diskList.setItems(observableDisks);
     }
     @FXML

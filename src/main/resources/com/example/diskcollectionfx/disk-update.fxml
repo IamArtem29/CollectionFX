@@ -14,7 +14,7 @@
     <TextField fx:id="diskName"/>
     <Label text="Description"/>
     <TextField fx:id="diskDescription"/>
-    <Label text="Тип"/>
+    <Label text="Type"/>
     <ToggleButton text="DVD" fx:id="diskTypeDVD"/>
     <ToggleButton text="CD-R" fx:id="diskTypeCDR"/>
     <ToggleButton text="mini-disk" fx:id="diskTypeMINI_DISK"/>

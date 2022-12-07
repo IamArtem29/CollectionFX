@@ -11,5 +11,5 @@
 
     <Button text="Show all disks" fx:id="allItemsButton" onAction="#onAllItemsClick"/>
     <Button text="Add new disk" fx:id="addNewItemButton" onAction="#onAddNewItemClick"/>
-    <Button text="Exit" fx:id="exitButton" onAction="#onExitClick"/>
+    <Button text="Close Application" fx:id="exitButton" onAction="#onExitClick"/>
 </VBox>

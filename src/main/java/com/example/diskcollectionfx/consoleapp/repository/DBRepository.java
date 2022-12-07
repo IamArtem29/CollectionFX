@@ -1,4 +1,4 @@
-package com.example.diskcollectionfx.logic.repository;
+package com.example.diskcollectionfx.consoleapp.repository;
 import java.sql.SQLException;
 import java.util.ArrayList;
 public interface DBRepository<T> {
