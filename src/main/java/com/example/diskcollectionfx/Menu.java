@@ -20,7 +20,7 @@ public class Menu {
         Parent myNewScene = null;
         try {
             stage = (Stage) allItemsButton.getScene().getWindow();
-            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items-screen.fxml")));
+            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items.fxml")));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

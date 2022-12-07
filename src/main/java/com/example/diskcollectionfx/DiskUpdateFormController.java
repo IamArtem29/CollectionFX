@@ -108,7 +108,7 @@ public class DiskUpdateFormController {
         Parent NewScene = null;
         try {
             stage = (Stage) backButton.getScene().getWindow();
-            NewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items-screen.fxml")));
+            NewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items.fxml")));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -146,7 +146,7 @@ public class DiskUpdateFormController {
         Parent NewScene = null;
         try{
             stage = (Stage) backButton.getScene().getWindow();
-            NewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items-screen.fxml")));
+            NewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items.fxml")));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

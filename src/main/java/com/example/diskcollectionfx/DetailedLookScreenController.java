@@ -67,7 +67,7 @@ public class DetailedLookScreenController {
         Parent myNewScene = null;
         try {
             stage = (Stage) backButton.getScene().getWindow();
-            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items-screen.fxml")));
+            myNewScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("all-items.fxml")));
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

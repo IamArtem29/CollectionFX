@@ -1,7 +1,6 @@
 package com.example.diskcollectionfx;
 import com.example.diskcollectionfx.logic.service.DiskService;
 import com.example.diskcollectionfx.logic.domain.Disk;
-import com.example.diskcollectionfx.logic.domain.DiskType;
 import com.example.diskcollectionfx.logic.repository.DBConnector;
 import com.example.diskcollectionfx.logic.repository.DiskRepository;
 import javafx.collections.FXCollections;
@@ -11,14 +10,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
-import javafx.util.Callback;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
-public class AllItemsScreenController {
+public class AllItems {
     @FXML
     private ListView<Disk> diskList;
     @FXML

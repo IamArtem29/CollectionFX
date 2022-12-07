@@ -5,11 +5,12 @@
 <?import javafx.scene.control.Button?>
 <VBox alignment="CENTER" spacing="5.0" xmlns:fx="http://javafx.com/fxml"
       minWidth="200"
-      fx:controller="com.example.diskcollectionfx.AllItemsScreenController">
+      fx:controller="com.example.diskcollectionfx.AllItems">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
     <ListView fx:id="diskList"/>
     <Button onAction="#onBackClick" fx:id="backButton" text="Back"/>
+
 </VBox>
